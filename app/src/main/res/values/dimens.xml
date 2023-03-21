@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginLarge">80dp</dimen>
+    <dimen name="textTatlie">24sp</dimen>
+    <dimen name="textNormal">16sp</dimen>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="notifcation">#487294</color>
+
+    <color name="textColor">#4094D0</color>
+    <color name="blueTelegram">#5A8EBD</color>
+    <color name="backGround">#F1F2F6</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="subText">#83868B</color>
+</resources>

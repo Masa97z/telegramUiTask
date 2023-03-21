@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TelegramChanelUi" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blueTelegram</item>
+        <item name="colorPrimaryVariant">@color/notifcation</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="circle">
+        <item name="cornerSize">40dp</item>
+        <item name="backgroundInsetEnd">@dimen/textNormal</item>
+    </style>
+    <style name="Color1SwitchStyle">
+        <item name="colorControlActivated">@color/blueTelegram
+        </item>
+    </style>
+</resources>

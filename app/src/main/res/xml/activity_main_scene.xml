@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/imageProfile"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/the_chance_photo"
+            android:src="@drawable/gredient"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidLineTop">
+            <CustomAttribute app:attributeName="roundPercent"
+                app:customFloatValue="0"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:text="The Chance"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/constraint" />
+
+        <Constraint
+            android:id="@+id/texStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Public channel"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/textTitle"
+            app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/imageProfile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/the_chance_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/arrow_icon">
+            <CustomAttribute app:attributeName="roundPercent"
+                app:customFloatValue="1"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="The Chance"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_marginStart="108dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/arrow_icon" />
+
+        <Constraint
+            android:id="@+id/texStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Public channel"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/textTitle"
+            app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/mid">
+        <Constraint
+            android:id="@+id/imageProfile"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/the_chance_photo"
+            app:layout_constraintStart_toEndOf="@+id/arrow_icon"
+            app:layout_constraintTop_toBottomOf="@+id/guidLineTop">
+            <CustomAttribute app:attributeName="roundPercent"
+                app:customFloatValue="1"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Chance"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_marginStart="72dp"
+            app:layout_constraintStart_toStartOf="@id/imageProfile"
+            app:layout_constraintTop_toBottomOf="@+id/guidLineTop" />
+
+        <Constraint
+            android:id="@+id/texStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Public channel"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/textTitle"
+            app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+        <Constraint
+            app:layout_editor_absoluteY="103dp"
+            app:layout_editor_absoluteX="323dp"
+            android:id="@+id/edit" />
+    </ConstraintSet>
+
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        >
+
+        <OnSwipe
+            app:touchAnchorId="@+id/constraint"
+            app:dragDirection="dragUp"/>
+
+    </Transition>
+    <Transition
+        app:constraintSetEnd="@id/mid"
+        app:constraintSetStart="@+id/end"
+        >
+
+        <OnSwipe
+            app:touchAnchorId="@+id/constraint"
+            app:dragDirection="dragUp"/>
+
+    </Transition>
+</MotionScene>

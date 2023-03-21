@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">telegramUiTask</string>
+
+    <string name="tme">t.me/theChane101</string>
+    <string name="info">Info</string>
+    <string name="notification">Notification</string>
+</resources>
